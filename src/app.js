@@ -2,7 +2,7 @@ console.log('Hi')
 
 //JSX 
 
-var tamplete=<p>Welcome to JSX...</p>
+var tamplete=<div><h1>Welcome to JSX...</h1> <p>new</p></div>
 // var tamplete = React.createElement(
 //     "p",
 //     null,

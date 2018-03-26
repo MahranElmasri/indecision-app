@@ -5,9 +5,19 @@ console.log('Hi');
 //JSX 
 
 var tamplete = React.createElement(
-  'p',
+  'div',
   null,
-  'Welcome to JSX...'
+  React.createElement(
+    'h1',
+    null,
+    'Welcome to JSX...'
+  ),
+  ' ',
+  React.createElement(
+    'p',
+    null,
+    'new'
+  )
 );
 // var tamplete = React.createElement(
 //     "p",
