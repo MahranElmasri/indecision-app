@@ -1,17 +1,18 @@
 
-let show=false;
+let show=true
 const toggole=()=>{
     show=!show
     render();
-    console.log(show)
+    // console.log(show)
 }
 
 const render=()=>{
     const app=(
         <div>
-            <h1>Toggole Visibality</h1>
-            <button onClick={toggole}>{show ?'Show':'Hiden'}</button>
+            <h1>Toggle Visibality</h1>
+            <button onClick={toggole}>{show ?'Show details':'Hiden details'}</button>
             <p>{show ?'this text show here':''}</p>
+           
         </div>
     )
     
