@@ -35,6 +35,10 @@ const removeAll=()=>{
     renderApp()
 
 }
+const shouldToDO=()=>{
+    var rand=Math.floor(Math.random()*user.options.length)
+    alert(user.options[rand])
+}
 const renderApp=()=>{
     var tamplete=
 <div>
@@ -42,6 +46,7 @@ const renderApp=()=>{
     <p>Put your life in the hands of a computer</p>
     <p>{user.options.length>0 ? 'Here are your options': 'no options'}</p>
     <p>total number of options is {user.options.length}</p>
+    <button disabled={user.options.length===0} onClick={shouldToDO}>What should I do?</button>
     <button onClick={removeAll}>Remove All</button>
     <ol>
        {user.options.map((option,key)=><li key>{option}</li>)}

@@ -34,6 +34,10 @@ var removeAll = function removeAll() {
     user.options = [];
     renderApp();
 };
+var shouldToDO = function shouldToDO() {
+    var rand = Math.floor(Math.random() * user.options.length);
+    alert(user.options[rand]);
+};
 var renderApp = function renderApp() {
     var tamplete = React.createElement(
         'div',
@@ -58,6 +62,11 @@ var renderApp = function renderApp() {
             null,
             'total number of options is ',
             user.options.length
+        ),
+        React.createElement(
+            'button',
+            { disabled: user.options.length === 0, onClick: shouldToDO },
+            'What should I do?'
         ),
         React.createElement(
             'button',
