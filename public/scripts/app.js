@@ -20,7 +20,7 @@ var IndecisionsApp = function (_React$Component) {
         _this.handlePick = _this.handlePick.bind(_this);
         _this.handleAddOption = _this.handleAddOption.bind(_this);
         _this.state = {
-            options: ['item 1', 'item 2', 'item 3', 'item 4']
+            options: []
 
         };
 
@@ -200,7 +200,7 @@ var AddOption = function (_React$Component6) {
 
         _this6.handlerAddOption = _this6.handlerAddOption.bind(_this6);
         _this6.state = {
-            error: ''
+            error: undefined
         };
         return _this6;
     }
@@ -210,13 +210,14 @@ var AddOption = function (_React$Component6) {
         value: function handlerAddOption(e) {
             e.preventDefault();
             var option = e.target.elements.option.value.trim();
+            // this.props.handleAddOption(option)
             var error = this.props.handleAddOption(option);
             if (error) {
                 this.setState(function () {
                     return { error: error };
                 });
             }
-            this.props.handleAddOption(option);
+
             e.target.elements.option.value = '';
         }
     }, {

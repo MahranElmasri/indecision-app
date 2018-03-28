@@ -5,7 +5,7 @@ class IndecisionsApp extends React.Component{
         this.handlePick=this.handlePick.bind(this)
         this.handleAddOption=this.handleAddOption.bind(this)
         this.state={
-            options:['item 1','item 2','item 3','item 4']
+            options:[]
            
         }
 
@@ -90,19 +90,20 @@ class AddOption extends React.Component{
         super(props);
         this.handlerAddOption=this.handlerAddOption.bind(this)
         this.state={
-            error:''
+            error:undefined
         }
     }
     handlerAddOption(e){
         e.preventDefault();
-        var option=(e.target.elements.option.value).trim();
-            const error=this.props.handleAddOption(option);
+        const option=(e.target.elements.option.value).trim();
+        // this.props.handleAddOption(option)
+        const error=this.props.handleAddOption(option);
             if(error){
                 this.setState(()=>{
                     return {error:error}
                 })
             }
-           this.props.handleAddOption(option)
+          
            e.target.elements.option.value=''
         
     }
