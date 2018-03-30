@@ -3,9 +3,11 @@ import React from 'react'
 export default class Header extends React.Component{
     render(){
         return(
-            <div>
-                <h1>{this.props.title}</h1>
-                <p>{this.props.subTitle}</p>
+            <div className='header'>
+            <div className='container'>
+                <h1 className='header__title'>{this.props.title}</h1>
+                <h2 className='header__subtitle'>{this.props.subTitle}</h2>
+            </div>
             </div>
         )
     }

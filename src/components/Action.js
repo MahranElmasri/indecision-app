@@ -3,7 +3,7 @@ import React from 'react';
 export default (props)=>{
     return(
         <div>
-        <button disabled={props.hasOption} onClick={props.handlePick}>What sould I Do?</button>
+        <button className='big-button' disabled={props.hasOption} onClick={props.handlePick}>What Should I Do?</button>
         </div>
     )
 }
